@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+   .nav-link.active{
+    background:#d44706;
+    color:#000;
+    padding:8px 18px;
+    border-radius:999px;
+    font-weight:700;
+}
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+<header class="fixed top-0 left-0 w-full z-50">
+
+  <!-- TOP BAR -->
+  <div class="bg-black text-white text-sm">
+    <div class="max-w-7xl mx-auto px-6 py-2 flex justify-between items-center">
+
+      <div class="flex items-center gap-6">
+        <span>
+          <i class="fa-solid fa-phone mr-2"></i>
+          +91 9437297366
+        </span>
+
+        <span class="hidden md:block">
+          <i class="fa-solid fa-envelope mr-2"></i>
+          school@gmail.com
+        </span>
+      </div>
+
+      <div class="flex gap-4">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MAIN HEADER -->
+  <div class="bg-white shadow-lg">
+
+    <div class="max-w-7xl mx-auto px-6 py-3">
+
+      <!-- LOGO CENTER -->
+      <div class="flex items-center justify-center gap-4">
+
+        <img
+          src="images/logo.png"
+          class="h-20 w-20 object-contain"
+        />
+
+        <div class="text-center">
+
+          <h1 class="text-3xl font-extrabold text-black uppercase">
+            St. Xavier High School
+          </h1>
+
+          <p class="text-gray-600 text-sm tracking-wider">
+            Cuttack
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- FLOATING NAVBAR -->
+    <div class="pb-4">
+
+      <div
+        class="max-w-6xl mx-auto bg-gradient-to-r from-black via-[#D84A35] to-[#000000] rounded-full shadow-xl px-8 py-4 hidden lg:flex justify-center items-center gap-10"
+      >
+
+        <a href="index.html"
+          class="nav-link text-white font-semibold hover:text-yellow-200">
+          Home
+        </a>
+
+        <a href="about.html"
+          class="nav-link text-white font-semibold hover:text-yellow-200">
+          About
+        </a>
+
+        <a href="academic.html"
+          class="nav-link text-white font-semibold hover:text-yellow-200">
+          Academics
+        </a>
+
+        <a href="admission.html"
+          class="nav-link text-white font-semibold hover:text-yellow-200">
+          Admission
+        </a>
+
+        <a href="facility.html"
+          class="nav-link text-white font-semibold hover:text-yellow-200">
+          Facilities
+        </a>
+        <a href="mandatory-disclosure.html"
+          class="nav-link text-white font-semibold hover:text-yellow-200">
+          Mandatory Disclosure
+        </a>
+
+        <a href="gallery.html"
+          class="nav-link text-white font-semibold hover:text-yellow-200">
+          Gallery
+        </a>
+
+        <a href="contact.html"
+          class="nav-link text-white font-semibold hover:text-yellow-200">
+          Contact
+        </a>
+
+      </div>
+
+      <!-- MOBILE BUTTON -->
+      <div class="lg:hidden text-center mt-3">
+
+        <button
+          onclick="openMenu()"
+          class="bg-[#C63B2D] text-white h-12 w-12 rounded-full shadow-lg"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</header>
+
+<!-- MOBILE MENU -->
+<div
+  id="mobileMenu"
+  class="fixed top-0 left-0 w-72 h-full bg-white shadow-xl transform -translate-x-full transition duration-300 z-50"
+>
+
+  <div
+    class="bg-gradient-to-r from-[#C63B2D] to-[#E8D43A] p-5 flex justify-between items-center"
+  >
+    <h2 class="text-white text-xl font-bold">Menu</h2>
+
+    <button
+      onclick="closeMenu()"
+      class="text-white text-3xl"
+    >
+      ×
+    </button>
+  </div>
+
+  <nav class="flex flex-col p-6 gap-5 font-medium">
+
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="academic.html">Academics</a>
+    <a href="admission.html">Admission</a>
+    <a href="facility.html">Facilities</a>
+    <a href="mandatory-disclosure">Mandatory Disclosure</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+
+    <a
+      href="#"
+      class="bg-gradient-to-r from-[#C63B2D] to-[#E8D43A] text-white text-center py-3 rounded-xl mt-3"
+    >
+      Apply Now
+    </a>
+
+  </nav>
+
+</div>
+
+<div
+  id="overlay"
+  class="fixed inset-0 bg-black/50 hidden z-40"
+  onclick="closeMenu()"
+></div>
+
+<script>
+  function openMenu() {
+    document
+      .getElementById("mobileMenu")
+      .classList.remove("-translate-x-full");
+
+    document
+      .getElementById("overlay")
+      .classList.remove("hidden");
+  }
+
+  function closeMenu() {
+    document
+      .getElementById("mobileMenu")
+      .classList.add("-translate-x-full");
+
+    document
+      .getElementById("overlay")
+      .classList.add("hidden");
+  }
+</script>
+</body>
+</html>
